@@ -22,9 +22,9 @@ To use these models, follow these steps:
 1. Install the required dependencies by running:
 pip install -r requirements.txt
 
-2. Place the .csv file in the main folder. Then, go to `main.py` and on line 21, replace `'Social_Network_Ads.csv'` with the name of your dataset file inside the brackets. For example:
-   `dataset = pd.read_csv('Social_Network_Ads.csv')`
-   ```Social_Network_Ads.csv is left for testing purposes if you want to see how application perform just run `main.py` ```
+2. Place the .csv file in the main folder. Then, go to `main.py` and on line 21, replace `'Wine.csv'` with the name of your dataset file inside the brackets. For example:
+   `dataset = pd.read_csv('Wine.csv')`
+   ```Wine.csv is left for testing purposes if you want to see how application perform just run `main.py` ```
   2.1 NOTE: Current implementation does NOT take care of any missing data.
 
 3. Run the `main.py` script to train and evaluate the models on the given dataset:
