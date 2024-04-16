@@ -18,7 +18,7 @@ classification_models = (knn, k_svm, dtr, lr, nb, rfc, svm, xgb)
 
 def get_data():
     # Import dataset
-    dataset = pd.read_csv('Social_Network_Ads.csv')
+    dataset = pd.read_csv('Wine.csv')
     X = dataset.iloc[:, :-1].values
     y = dataset.iloc[:, -1].values
     # Split into training and test sets
@@ -38,7 +38,7 @@ def get_best_model():
         trained_models.append((f'Model: {model.model_name}\nAccuracy score: {acc_score:.2f}\nConfusion score: '
                                f'{conf_score}\nCross_validation score: {cross_val_score:.2f}'))
         trained_models.sort(key=lambda x: x[3], reverse=True)
-    return trained_models[0]
+    return f'Best model: {trained_models[0]}\nSecond model by performance: {trained_models[1]}'
 
 
 print(get_best_model())
