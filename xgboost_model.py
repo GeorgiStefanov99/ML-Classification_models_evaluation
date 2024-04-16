@@ -25,7 +25,7 @@ class XGBoost_model:
         xgb_model = XGBClassifier(**best_params)
         xgb_model.fit(X_train, y_train_encoded)
         y_pred = xgb_model.predict(X_test)
-        cross_validation_score = cross_val_score(estimator=xgb_model, X=X_train, y=y_train, cv=10, n_jobs=-1)
+        cross_validation_score = cross_val_score(estimator=xgb_model, X=X_train, y=y_train_encoded, cv=10, n_jobs=-1)
         acc_score = accuracy_score(y_pred, y_test_encoded)
         conf_score = confusion_matrix(y_pred, y_test_encoded)
         return acc_score, conf_score, cross_validation_score.mean()
